@@ -34,9 +34,9 @@ function About() {
             <img alt='profile picture' src='./dp.jpg' />
           </div>
           <div className='about-content-skills'>
-            Experienced in: Javascript / ReactJS / NodeJS / CesiumJS / ExpressJS
-            / Luciad / Leaflet / HTML / CSS / Vite / PostgreSQL / Java / OGC
-            Standards / GIS / Linux
+            <span>Experienced in:</span> Javascript / ReactJS / NodeJS /
+            CesiumJS / ExpressJS / Luciad / Leaflet / HTML / CSS / Vite /
+            PostgreSQL / Java / OGC Standards / GIS / Linux
           </div>
           <div className='about-content-cert'>
             Certified in:&nbsp;

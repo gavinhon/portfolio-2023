@@ -46,6 +46,7 @@
   grid-area: skill;
   display: flex;
   padding-top: var(--padding-sm);
+  flex-direction: column;
 }
 
 .about-content .about-content-cert {
@@ -70,5 +71,8 @@ a {
   }
   .about-content .about-content-img {
     display: none;
+  }
+  .about-content .about-content-cert {
+    flex-direction: column;
   }
 }

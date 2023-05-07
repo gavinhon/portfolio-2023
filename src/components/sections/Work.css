@@ -1,5 +1,9 @@
 .work-content {
-  height: 50vh;
+  display: grid;
+  grid-template-areas:
+    'work-nav'
+    'work-item';
+  grid-template-rows: auto;
 }
 .work-content nav {
   margin-bottom: var(--padding-sm);
@@ -7,6 +11,7 @@
   overflow: auto;
   display: flex;
   justify-content: space-between;
+  grid-area: work-nav;
 }
 .work-content nav a {
   padding: var(--padding-sm);
@@ -26,20 +31,30 @@
   border: solid 0.1rem var(--main-purple);
   /*transition: all 0.3s ease;*/
 }
+
+.work-item {
+  grid-area: work-item;
+  display: grid;
+  grid-template-areas:
+    'work-position'
+    'work-tenure'
+    'work-content';
+}
+
 p.work-tenure {
   font-style: italic;
   margin: 0;
+  grid-area: work-tenure;
 }
 p.work-position {
   font-weight: 600;
   margin: 0;
+  grid-area: work-position;
 }
 
 .work-content ul {
+  grid-area: work-content;
   line-height: 2;
-}
-
-.work-content ul {
   list-style: none; /* Remove default bullet points */
   padding-left: 0; /* Remove default left padding */
 }
