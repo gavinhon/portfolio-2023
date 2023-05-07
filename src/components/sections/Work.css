@@ -1,0 +1,57 @@
+.work-content {
+  height: 50vh;
+}
+.work-content nav {
+  margin-bottom: var(--padding-sm);
+  padding: var(--padding-sm) 0px;
+  overflow: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.work-content nav a {
+  padding: var(--padding-sm);
+  margin: 0 var(--padding-sm);
+  color: var(--text-clr);
+  border: solid 0.1rem var(--text-clr);
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+}
+
+.work-content nav a:hover,
+.work-content nav a.active {
+  color: var(--main-purple);
+  border: solid 0.1rem var(--main-purple);
+  /*transition: all 0.3s ease;*/
+}
+p.work-tenure {
+  font-style: italic;
+  margin: 0;
+}
+p.work-position {
+  font-weight: 600;
+  margin: 0;
+}
+
+.work-content ul {
+  line-height: 2;
+}
+
+.work-content ul {
+  list-style: none; /* Remove default bullet points */
+  padding-left: 0; /* Remove default left padding */
+}
+
+.work-content ul li {
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.work-content ul li::before {
+  content: '\25B6'; /* Unicode arrow right character */
+  left: 0;
+  position: absolute;
+  color: var(--main-purple);
+}

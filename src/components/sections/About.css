@@ -1,0 +1,74 @@
+.about-content {
+  display: grid;
+  grid-template-areas:
+    'p1 p1 img'
+    'p2 p2 img'
+    'p3 p3 img'
+    'skill skill img'
+    'cert cert img';
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#about-content-p1 {
+  grid-area: p1;
+}
+#about-content-p2 {
+  grid-area: p2;
+}
+#about-content-p3 {
+  grid-area: p3;
+}
+#about-content-p3 span {
+  color: var(--main-purple);
+}
+.about-content p {
+  margin-top: 0;
+}
+
+.about-content .about-content-img {
+  grid-area: img;
+  display: flex;
+  justify-content: end;
+  margin-left: var(--padding-sm);
+}
+.about-content .about-content-img img {
+  max-height: 250px;
+  max-width: 194.49px;
+  filter: saturate(0);
+  box-shadow: var(--bs);
+}
+.about-content .about-content-img img:hover {
+  filter: saturate(1);
+  transition: all 1s ease;
+}
+
+.about-content .about-content-skills {
+  grid-area: skill;
+  display: flex;
+  padding-top: var(--padding-sm);
+}
+
+.about-content .about-content-cert {
+  grid-area: cert;
+  display: flex;
+  padding-top: var(--padding-sm);
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-purple);
+}
+
+@media (max-width: 640px) {
+  .about-content {
+    grid-template-areas:
+      'p1 p1 p1'
+      'p2 p2 p2'
+      'p3 p3 p3'
+      'skill skill skill'
+      'cert cert cert';
+  }
+  .about-content .about-content-img {
+    display: none;
+  }
+}
