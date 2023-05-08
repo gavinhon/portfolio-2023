@@ -1,4 +1,16 @@
+.work-section section {
+  display: grid;
+  grid-template-areas:
+    'work-title'
+    'work-body';
+  grid-template-rows: auto 1fr;
+}
+#work-title {
+  grid-area: work-title;
+}
+
 .work-content {
+  grid-area: work-body;
   display: grid;
   grid-template-areas:
     'work-nav'
@@ -6,12 +18,12 @@
   grid-template-rows: auto;
 }
 .work-content nav {
+  grid-area: work-nav;
   margin-bottom: var(--padding-sm);
   padding: var(--padding-sm) 0px;
   overflow: auto;
   display: flex;
   justify-content: space-between;
-  grid-area: work-nav;
 }
 .work-content nav a {
   padding: var(--padding-sm);

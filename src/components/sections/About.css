@@ -1,4 +1,16 @@
+.about-section section {
+  display: grid;
+  grid-template-areas:
+    'about-title'
+    'about-body';
+  grid-template-rows: auto 1fr;
+}
+#about-title {
+  grid-area: about-title;
+}
+
 .about-content {
+  grid-area: about-body;
   display: grid;
   grid-template-areas:
     'p1 p1 img'

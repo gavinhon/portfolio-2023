@@ -69,7 +69,7 @@ function Work() {
   return work ? (
     <div id='work-section' className='section work-section'>
       <section>
-        <h3>Working Experience</h3>
+        <h3 id='work-title'>Working Experience</h3>
         <div className='work-content'>
           <nav>
             {worklist.map((workitem) => (

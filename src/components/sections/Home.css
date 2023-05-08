@@ -1,9 +1,10 @@
 .home-content {
+  grid-area: home-content;
   display: grid;
   grid-template-areas:
-    'p'
-    'h3'
-    'a';
+    'p earth'
+    'h3 earth'
+    'a earth';
   color: var(--text-clr);
 }
 
@@ -20,6 +21,7 @@
   grid-area: h3;
   font-size: var(--length-lg-md);
   margin: 8px 0px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .home-content a {

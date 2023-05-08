@@ -8,6 +8,7 @@ body,
   margin: 0;
   line-height: 1.5;
   scroll-behavior: smooth;
+  background-color: var(--disabled);
 
   --main-purple: #8739f9;
   --main-blue: #37b9f1;
@@ -70,27 +71,33 @@ section {
 .navbar-section section {
   justify-content: end;
 }
-.home-section {
-  grid-area: home-section;
-  background-color: var(--disabled);
-}
-.about-section {
-  grid-area: about-section;
-  background-color: var(--disabled);
-}
-.work-section {
-  grid-area: work-section;
-  background-color: var(--disabled);
-}
 .home-section,
 .about-section,
 .work-section {
+  user-select: none;
   display: flex;
+  z-index: 2;
 }
-
+.home-section {
+  grid-area: home-section;
+}
+.about-section {
+  grid-area: about-section;
+}
+.work-section {
+  grid-area: work-section;
+}
 .about-section h3,
 .work-section h3 {
   color: var(--main-purple);
+}
+#bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 50%;
+  z-index: -1;
+  transition: left 1s ease;
 }
 
 @media (max-width: 640px) {
@@ -102,5 +109,16 @@ section {
   }
   section {
     width: 90%;
+  }
+  #bg {
+    left: 100%;
+    transition: left 1s ease;
+  }
+}
+
+@media (min-width: 1400px) {
+  #bg {
+    left: 33%;
+    transition: left 1s ease;
   }
 }

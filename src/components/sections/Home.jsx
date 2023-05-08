@@ -1,4 +1,5 @@
 import React from 'react';
+import ThreeEarth from '../ThreeEarth';
 import './Home.css';
 
 function Home() {
@@ -13,6 +14,7 @@ function Home() {
           <a href='#about-section'>About Me</a>
         </div>
       </section>
+      <ThreeEarth />
     </div>
   );
 }

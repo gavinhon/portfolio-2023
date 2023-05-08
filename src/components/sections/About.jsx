@@ -5,7 +5,7 @@ function About() {
   return (
     <div id='about-section' className='section about-section'>
       <section>
-        <h3>About Me</h3>
+        <h3 id='about-title'>About Me</h3>
         <div className='about-content'>
           <p id='about-content-p1'>
             I started out as a software developer that focused on semiconductor
