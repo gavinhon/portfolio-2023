@@ -6,6 +6,7 @@ import Navbar from './components/sections/Navbar';
 import Home from './components/sections/Home';
 import About from './components/sections/About';
 import Work from './components/sections/Work';
+import Footer from './components/sections/Footer';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,6 +18,7 @@ function App() {
         <Home />
         <About />
         <Work />
+        <Footer />
       </div>
     </div>
   );

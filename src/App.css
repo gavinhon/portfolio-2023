@@ -39,8 +39,9 @@ body,
     'navbar-section navbar-section navbar-section'
     'home-section home-section home-section'
     'about-section about-section about-section'
-    'work-section work-section work-section';
-  grid-template-rows: auto 100vh 100vh 100vh;
+    'work-section work-section work-section'
+    'footer-section footer-section footer-section';
+  grid-template-rows: auto 100vh 100vh 100vh auto;
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
 }
@@ -71,9 +72,14 @@ section {
 .navbar-section section {
   justify-content: end;
 }
+.footer-section section {
+  justify-content: center;
+}
+
 .home-section,
 .about-section,
-.work-section {
+.work-section,
+.footer-section {
   user-select: none;
   display: flex;
   z-index: 2;
@@ -86,6 +92,9 @@ section {
 }
 .work-section {
   grid-area: work-section;
+}
+.footer-section {
+  grid-area: footer-section;
 }
 .about-section h3,
 .work-section h3 {
@@ -105,7 +114,7 @@ section {
   transition: left 1s ease;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .navbar-section {
     background-color: var(--disabled-80);
   }
@@ -119,18 +128,14 @@ section {
     left: 100%;
     transition: left 1s ease;
   }
+  .container {
+    grid-template-rows: auto 1fr 1fr 1fr auto; /* Adjust the number of rows as needed */
+  }
 }
 
 @media (min-width: 1400px) {
   #bg {
     left: 33%;
     transition: left 1s ease;
-  }
-}
-
-/* Prevent grid rows from collasping due to overflow from 100vh*/
-@media (max-height: 400px) {
-  .container {
-    grid-template-rows: auto 1fr 1fr 1fr; /* Adjust the number of rows as needed */
   }
 }

@@ -41,7 +41,7 @@
   box-shadow: var(--bs);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .home-content p {
     font-size: var(--length-md-sm);
   }
