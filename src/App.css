@@ -48,8 +48,10 @@ body,
 
 .section {
   width: 100%;
+
   /*background-color: var(--main-offwhite);*/
 }
+
 section {
   width: 60%;
   margin: auto;
@@ -107,6 +109,7 @@ section {
   left: 0;
   position: absolute;
   z-index: -1;
+  transition-delay: 200ms;
 }
 #bg {
   position: relative;

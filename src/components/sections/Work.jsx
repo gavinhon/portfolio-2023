@@ -63,6 +63,25 @@ function Work() {
   useEffect(() => {
     setWork(worklist[0]);
   }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          //console.log(entry);
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          } else {
+            entry.target.classList.remove('show');
+          }
+        });
+      },
+      { threshold: 0.0 }
+    );
+    const sectionElements = document.querySelectorAll('.work-li');
+    sectionElements.forEach((el) => observer.observe(el));
+  }, [work]);
+
   const selectWork = (workitem) => {
     setWork(workitem);
   };

@@ -9,7 +9,9 @@ function WorkItem({ work }) {
       <p className='work-tenure'>{work.tenure}</p>
       <ul>
         {work.description.map((line, index) => (
-          <li key={work.company + index}>{line}</li>
+          <li className='work-li hide-for-show' key={work.company + index}>
+            {line}
+          </li>
         ))}
       </ul>
     </div>

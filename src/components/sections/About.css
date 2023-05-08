@@ -54,6 +54,19 @@
   filter: saturate(1);
   transition: all 1s ease;
 }
+.tint {
+  height: 250px;
+  width: 194.49px;
+  position: absolute;
+  opacity: 0.2;
+  background-color: var(--main-purple);
+  user-select: none;
+  transition: all 1s ease;
+}
+.about-content .about-content-img:hover .tint {
+  transition: all 1s ease;
+  opacity: 0;
+}
 
 .about-content .about-content-skills {
   grid-area: skill;
@@ -71,21 +84,6 @@
 a {
   text-decoration: none;
   color: var(--main-purple);
-}
-
-.tint {
-  height: 250px;
-  width: 194.49px;
-  position: absolute;
-  opacity: 0.2;
-  background-color: var(--main-purple);
-  user-select: none;
-  transition: all 1s ease;
-}
-
-.about-content .about-content-img:hover .tint {
-  transition: all 1s ease;
-  opacity: 0;
 }
 
 @media (max-width: 768px) {
