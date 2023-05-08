@@ -48,8 +48,9 @@
   max-width: 194.49px;
   filter: saturate(0);
   box-shadow: var(--bs);
+  transition: all 1s ease;
 }
-.about-content .about-content-img img:hover {
+.about-content .about-content-img:hover img {
   filter: saturate(1);
   transition: all 1s ease;
 }
@@ -70,6 +71,21 @@
 a {
   text-decoration: none;
   color: var(--main-purple);
+}
+
+.tint {
+  height: 250px;
+  width: 194.49px;
+  position: absolute;
+  opacity: 0.2;
+  background-color: var(--main-purple);
+  user-select: none;
+  transition: all 1s ease;
+}
+
+.about-content .about-content-img:hover .tint {
+  transition: all 1s ease;
+  opacity: 0;
 }
 
 @media (max-width: 768px) {

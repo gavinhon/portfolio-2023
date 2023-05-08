@@ -41,7 +41,12 @@
 .work-content nav a.active {
   color: var(--main-purple);
   border: solid 0.1rem var(--main-purple);
-  /*transition: all 0.3s ease;*/
+}
+.work-content nav a.active {
+  background-color: var(--main-purple);
+  color: var(--main-offwhite);
+  transition: all 0.3s ease;
+  box-shadow: var(--bs);
 }
 
 .work-item {

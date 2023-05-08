@@ -32,6 +32,7 @@ function About() {
           </p>
           <div className='about-content-img'>
             <img alt='profile picture' src='./dp.jpg' />
+            <div className='tint'></div>
           </div>
           <div className='about-content-skills'>
             <span>Experienced in:</span> Javascript / ReactJS / NodeJS /
