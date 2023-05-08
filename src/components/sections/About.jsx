@@ -18,7 +18,7 @@ function About() {
             development.
           </p>
           <p id='about-content-p3'>
-            Currently, I hold the position of <a>Presales Engineer</a> at
+            Currently, I hold the position of Presales Engineer at
             <a
               title='https://hexagon.com/'
               href='https://hexagon.com/'

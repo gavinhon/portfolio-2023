@@ -4,15 +4,15 @@ function WorkItem({ work }) {
   return work ? (
     <div className='work-item'>
       <p className='work-position'>
+        {work.position} at{' '}
         <a
           title={work.website}
           href={work.website}
           target='_blank'
           rel='noopener noreferrer'
         >
-          {work.position}
-        </a>{' '}
-        at {work.company}
+          {work.company}
+        </a>
       </p>
       <p className='work-tenure'>{work.tenure}</p>
       <ul>
