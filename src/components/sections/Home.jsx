@@ -8,10 +8,21 @@ function Home() {
       <section>
         <div className='home-content'>
           <p>
-            Hi! I'm <span>Gavin Hon</span>
+            Hi! I'm{' '}
+            <a
+              id='profile-name'
+              title='https://linkedin.com/in/gavinhon'
+              href='https://linkedin.com/in/gavinhon'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Gavin Hon
+            </a>
           </p>
           <h3>I specialize in presales and software development.</h3>
-          <a href='#about-section'>About Me</a>
+          <a id='border-btn' href='#about-section'>
+            About Me
+          </a>
         </div>
       </section>
       <div className='bg-container'>

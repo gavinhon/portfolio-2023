@@ -24,7 +24,7 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.home-content a {
+#border-btn {
   grid-area: a;
   text-decoration: none;
   font-size: var(--length-md-md);
@@ -34,7 +34,7 @@
   padding: 0.25rem 1.25rem;
 }
 
-.home-content a:hover {
+#border-btn:hover {
   background-color: var(--main-purple);
   color: var(--main-offwhite);
   transition: all 0.3s ease;
