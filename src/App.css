@@ -128,3 +128,10 @@ section {
     transition: left 1s ease;
   }
 }
+
+/* Prevent grid rows from collasping due to overflow from 100vh*/
+@media (max-height: 400px) {
+  .container {
+    grid-template-rows: auto 1fr 1fr 1fr; /* Adjust the number of rows as needed */
+  }
+}
