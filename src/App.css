@@ -91,11 +91,17 @@ section {
 .work-section h3 {
   color: var(--main-purple);
 }
-#bg {
-  position: absolute;
+.bg-container {
+  overflow: hidden;
   top: 0;
   right: 0;
+  left: 0;
+  position: absolute;
+}
+#bg {
+  position: relative;
   left: 50%;
+  overflow: hidden;
   z-index: -1;
   transition: left 1s ease;
 }

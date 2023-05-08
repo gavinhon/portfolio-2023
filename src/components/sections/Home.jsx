@@ -14,7 +14,9 @@ function Home() {
           <a href='#about-section'>About Me</a>
         </div>
       </section>
-      <ThreeEarth />
+      <div className='bg-container'>
+        <ThreeEarth />
+      </div>
     </div>
   );
 }
