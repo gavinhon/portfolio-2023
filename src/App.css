@@ -131,6 +131,11 @@ section {
     left: 100%;
     transition: left 1s ease;
   }
+  .home-section,
+  .about-section,
+  .work-section {
+    min-height: 100vh;
+  }
   .container {
     grid-template-rows: auto 1fr 1fr 1fr auto; /* Adjust the number of rows as needed */
   }
