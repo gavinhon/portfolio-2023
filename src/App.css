@@ -97,12 +97,11 @@ section {
   right: 0;
   left: 0;
   position: absolute;
+  z-index: -1;
 }
 #bg {
   position: relative;
   left: 50%;
-  overflow: hidden;
-  z-index: -1;
   transition: left 1s ease;
 }
 

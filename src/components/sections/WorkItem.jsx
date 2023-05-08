@@ -4,7 +4,7 @@ function WorkItem({ work }) {
   return work ? (
     <div className='work-item'>
       <p className='work-position'>
-        {work.position} @ {work.company}
+        <span>{work.position}</span> at {work.company}
       </p>
       <p className='work-tenure'>{work.tenure}</p>
       <ul>

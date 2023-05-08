@@ -57,11 +57,17 @@ p.work-tenure {
   font-style: italic;
   margin: 0;
   grid-area: work-tenure;
+  color: var(--text-clr);
 }
 p.work-position {
   font-weight: 600;
   margin: 0;
   grid-area: work-position;
+  color: var(--text-clr);
+}
+
+p.work-position span {
+  color: var(--main-purple);
 }
 
 .work-content ul {
