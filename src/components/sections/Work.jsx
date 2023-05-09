@@ -31,6 +31,7 @@ function Work() {
         'Engaging public and private sectors with sales team to come up with proof-of-concept.',
         'Research on potential improvement in the usage of 3D data and emerging open source libraries based on OGC standards.',
       ],
+      project: 'https://www.onemap3d.gov.sg/main/',
     },
     {
       id: 3,
