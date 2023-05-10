@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ThreeEarth from '../ThreeEarth';
 import './Home.css';
 
 function Home() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          //console.log(entry);
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          } else {
+            entry.target.classList.remove('show');
+          }
+        });
+      },
+      { threshold: 0.0 }
+    );
+    const sectionElements = document.querySelectorAll('.bg-container');
+    sectionElements.forEach((el) => observer.observe(el));
+  }, []);
   return (
-    <div id='home-section' className='section home-section'>
+    <div id='home-section' className='section home-section hide-for-show'>
       <section>
         <div className='home-content'>
           <p>
@@ -25,7 +42,7 @@ function Home() {
           </a>
         </div>
       </section>
-      <div className='bg-container'>
+      <div className='bg-container hide-for-show'>
         <ThreeEarth />
       </div>
     </div>

@@ -41,6 +41,23 @@
   box-shadow: var(--bs);
 }
 
+/* Fly in from left overwrite to split up earth and main content*/
+.hide-for-show.bg-container {
+  transform: translateX(-50%);
+  transition: all 1s ease;
+}
+.bg-container.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(50%);
+  transition-delay: 200ms;
+}
+@media (min-width: 1400px) {
+  .bg-container.show {
+    transform: translateX(33%);
+  }
+}
+
 @media (max-width: 768px) {
   .home-content p {
     font-size: var(--length-md-sm);
@@ -50,5 +67,9 @@
   }
   .home-content a {
     font-size: var(--length-sm-sm);
+  }
+  .bg-container.show {
+    transform: translateX(100%);
+    opacity: 0;
   }
 }
