@@ -5,7 +5,27 @@ function Footer() {
   return (
     <div className='section footer-section'>
       <section>
-        <p>&copy; Gavin Hon 2023. All rights reserved.</p>
+        <div className='footer-links'>
+          <a
+            title='https://linkedin.com/in/gavinhon'
+            href='https://linkedin.com/in/gavinhon'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <img src='./linkedin.svg' alt='linkedin image' />
+          </a>
+          <a
+            title='https://github.com/gavinhon'
+            href='https://github.com/gavinhon'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <img src='./github.svg' alt='github image' />
+          </a>
+        </div>
+        <p className='footer-copyright'>
+          &copy; Gavin Hon 2023. All rights reserved.
+        </p>
       </section>
     </div>
   );

@@ -1,0 +1,27 @@
+.footer-section section {
+  display: grid;
+  grid-template-areas:
+    'footer-links'
+    'footer-copyright';
+  grid-template-rows: auto;
+}
+
+.footer-links {
+  grid-area: footer-links;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-links a {
+  padding: 0px var(--padding-sm);
+}
+
+.footer-links a:hover {
+  color: var(--main-purple);
+}
+
+.footer-copyright {
+  grid-area: footer-copyright;
+  font-size: 0.66rem;
+  margin-top: 0px;
+}
