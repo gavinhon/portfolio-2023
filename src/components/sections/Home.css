@@ -28,7 +28,7 @@
   grid-area: a;
   text-decoration: none;
   font-size: var(--length-md-md);
-  border: solid 0.15rem var(--main-purple);
+  border: solid 0.1rem var(--main-purple);
   border-radius: 3px;
   width: max-content;
   padding: 0.25rem 1.25rem;

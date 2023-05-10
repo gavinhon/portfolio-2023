@@ -72,13 +72,19 @@
   grid-area: skill;
   display: flex;
   padding-top: var(--padding-sm);
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .about-content .about-content-cert {
   grid-area: cert;
   display: flex;
   padding-top: var(--padding-sm);
+  flex-wrap: wrap;
+}
+
+.about-content-title {
+  margin-bottom: auto;
+  white-space: nowrap;
 }
 
 a {
@@ -98,7 +104,7 @@ a {
   .about-content .about-content-img {
     display: none;
   }
-  .about-content .about-content-cert {
-    flex-direction: column;
+  .about-content-title {
+    display: block;
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.css';
 
-function About() {
+function About({ skillset, certifications }) {
   return (
     <div id='about-section' className='section about-section hide-for-show'>
       <section>
@@ -35,20 +35,30 @@ function About() {
             <div className='tint'></div>
           </div>
           <div className='about-content-skills'>
-            <span>Experienced in:</span> Javascript / ReactJS / NodeJS /
-            CesiumJS / ExpressJS / Luciad / Leaflet / HTML / CSS / Vite /
-            PostgreSQL / Java / OGC Standards / GIS / Linux
+            <p className='about-content-title'>Experienced in:&nbsp;</p>
+            {skillset.map((skill) => {
+              return (
+                <span key={skill.skill} className={`${skill.type} skill-icon`}>
+                  {skill.skill}
+                </span>
+              );
+            })}
           </div>
           <div className='about-content-cert'>
-            Certified in:&nbsp;
-            <a
-              title='https://www.credly.com'
-              href='https://www.credly.com/badges/812211e2-fc9b-4b87-9922-ca0e9bbd92e0/public_url'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              Microsoft Azure Fundamentals (AZ-900)
-            </a>
+            <p className='about-content-title'>Certified in:&nbsp;</p>
+            {certifications.map((cert) => {
+              return (
+                <a
+                  key={cert.cert}
+                  className={`${cert.type} cert-icon`}
+                  href={cert.proof}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {cert.cert}
+                </a>
+              );
+            })}
           </div>
         </div>
       </section>

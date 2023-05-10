@@ -28,12 +28,16 @@ function App() {
       tenure: 'November 2019 - November 2022',
       website: 'https://www.sla.gov.sg/',
       description: [
-        'Frontend development and optimization of a 3D web map using open source technology in collaboration with designer and product owner.',
-        'Built automated processes for data processing according to application requirements.',
-        'Engaging public and private sectors with sales team to come up with proof-of-concept.',
-        'Research on potential improvement in the usage of 3D data and emerging open source libraries based on OGC standards.',
+        'Develop and optimize a 3D web map using open source technology.',
+        'Create automated processes for data processing.',
+        'Collaborate with sales to engage public and private sectors in proof-of-concept development.',
+        'Conduct research on utilizing 3D data and emerging open source libraries based on OGC standards to identify potential improvements.',
       ],
-      project: 'https://www.onemap3d.gov.sg/main/',
+      project: {
+        url: 'https://www.onemap3d.gov.sg/main/',
+        image:
+          'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.sla.gov.sg%2Farticles%2Fpress-releases%2F2020%2Flaunch-of-onemap3d-beta-at-singapore-geospatial-week-2020&psig=AOvVaw1TSpWYhYdLOmTrsE-L8_vO&ust=1683821167364000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCMiv9uSQ6_4CFQAAAAAdAAAAABAE',
+      },
     },
     {
       id: 3,
@@ -42,10 +46,10 @@ function App() {
       tenure: 'September 2017 - October 2019',
       website: 'https://www.micron.com/',
       description: [
-        'Develop, test, deploy and maintenance of applications used by manufacturing tools.',
-        'Develop automated solutions in work process through scripting for manufacturing stakeholders and IT team.',
-        'Perform testing, deployment and maintenance of vendor products.',
-        'Provide L2 support for IT services.',
+        'Develop, test, deploy, and maintain manufacturing tool applications.',
+        'Implement automated solutions through scripting to optimize work processes for manufacturing stakeholders and the IT team.',
+        'Conduct testing, deployment, and maintenance of vendor products.',
+        'Offer Level 2 (L2) support for IT services.',
       ],
     },
     {
@@ -60,6 +64,36 @@ function App() {
         '2011 - Under the department of Sensor Business Group (SBG) working on AgilFence (PIDS)',
         'Conduct site survey and product testing.',
       ],
+    },
+  ];
+  const skillset = [
+    { id: 0, type: 'gis', skill: 'GIS' },
+    { id: 1, type: 'gis', skill: 'OGC Standards' },
+    { id: 2, type: 'gis', skill: 'CesiumJS' },
+    { id: 3, type: 'gis', skill: 'Leaflet' },
+    { id: 4, type: 'gis', skill: 'Luciad' },
+    { id: 5, type: 'dev', skill: 'Javascript' },
+    { id: 6, type: 'dev', skill: 'ReactJS' },
+    { id: 7, type: 'dev', skill: 'NodeJS' },
+    { id: 8, type: 'dev', skill: 'ExpressJS' },
+    { id: 9, type: 'dev', skill: 'CSS' },
+    { id: 10, type: 'dev', skill: 'HTML' },
+    { id: 11, type: 'dev', skill: 'Linux' },
+    { id: 12, type: 'dev', skill: 'Windows Server' },
+    { id: 13, type: 'dev', skill: 'PostgreSQL' },
+    { id: 14, type: 'dev', skill: 'Java' },
+    { id: 15, type: 'dev', skill: 'Vite' },
+    { id: 16, type: 'presales', skill: 'Presales' },
+    { id: 17, type: 'presales', skill: 'Product Demo' },
+    { id: 18, type: 'presales', skill: 'Customer Training' },
+  ];
+  const certifications = [
+    {
+      id: 1,
+      type: 'cloud',
+      cert: 'Microsoft Azure Fundamentals (AZ-900)',
+      proof:
+        'https://www.credly.com/badges/812211e2-fc9b-4b87-9922-ca0e9bbd92e0/public_url',
     },
   ];
   const [work, setWork] = useState();
@@ -85,7 +119,7 @@ function App() {
       <div className='container'>
         <Navbar />
         <Home />
-        <About />
+        <About skillset={skillset} certifications={certifications} />
         <Work work={work} worklist={worklist} setWork={setWork} />
         <Footer />
       </div>
