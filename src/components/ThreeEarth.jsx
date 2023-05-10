@@ -145,7 +145,7 @@ function ThreeEarth() {
     animateMesh();
   }, []);
 
-  return <canvas id='bg'></canvas>;
+  return <canvas id='bg' className='hide-for-show'></canvas>;
 }
 
 export default ThreeEarth;

@@ -17,7 +17,7 @@ function Home() {
       },
       { threshold: 0.0 }
     );
-    const sectionElements = document.querySelectorAll('.bg-container');
+    const sectionElements = document.querySelectorAll('#bg');
     sectionElements.forEach((el) => observer.observe(el));
   }, []);
   return (
@@ -42,7 +42,7 @@ function Home() {
           </a>
         </div>
       </section>
-      <div className='bg-container hide-for-show'>
+      <div className='bg-container'>
         <ThreeEarth />
       </div>
     </div>

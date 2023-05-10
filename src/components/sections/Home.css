@@ -28,9 +28,9 @@
   grid-area: a;
   text-decoration: none;
   font-size: var(--length-md-md);
-  border: solid 0.1rem var(--main-purple);
+  border: solid 0.15rem var(--main-purple);
   border-radius: 3px;
-  width: fit-content;
+  width: max-content;
   padding: 0.25rem 1.25rem;
 }
 
@@ -42,18 +42,18 @@
 }
 
 /* Fly in from left overwrite to split up earth and main content*/
-.hide-for-show.bg-container {
+#bg {
   transform: translateX(-50%);
   transition: all 1s ease;
 }
-.bg-container.show {
+#bg.show {
   opacity: 1;
   filter: blur(0);
   transform: translateX(50%);
   transition-delay: 200ms;
 }
 @media (min-width: 1400px) {
-  .bg-container.show {
+  #bg.show {
     transform: translateX(33%);
   }
 }
@@ -68,7 +68,10 @@
   .home-content a {
     font-size: var(--length-sm-sm);
   }
-  .bg-container.show {
+  .home-content #border-btn {
+    font-size: var(--length-sm-sm);
+  }
+  #bg.show {
     transform: translateX(100%);
     opacity: 0;
   }
