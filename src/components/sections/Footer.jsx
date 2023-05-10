@@ -12,7 +12,12 @@ function Footer() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <img src='./linkedin.svg' alt='linkedin image' />
+            <img
+              width='32'
+              height='32'
+              src='./linkedin.svg'
+              alt='linkedin image'
+            />
           </a>
           <a
             title='https://github.com/gavinhon'
@@ -20,7 +25,7 @@ function Footer() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <img src='./github.svg' alt='github image' />
+            <img width='32' height='32' src='./github.svg' alt='github image' />
           </a>
         </div>
         <p className='footer-copyright'>

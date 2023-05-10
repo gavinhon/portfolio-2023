@@ -37,13 +37,13 @@ function Work({ work, worklist, setWork }) {
         <div className='work-content'>
           <nav>
             {worklist.map((workitem) => (
-              <a
+              <span
                 className={work.company == workitem.company ? 'active' : ''}
                 key={workitem.id}
                 onClick={() => selectWork(workitem)}
               >
                 {workitem.company}
-              </a>
+              </span>
             ))}
           </nav>
           <WorkItem work={work} />
