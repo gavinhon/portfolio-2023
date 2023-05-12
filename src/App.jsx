@@ -2,10 +2,12 @@ import { lazy, Suspense, useEffect, useState } from 'react';
 import './App.css';
 import Navbar from './components/sections/Navbar';
 import Home from './components/sections/Home';
-import About from './components/sections/About';
-const Work = lazy(() => import('./components/sections/Work'));
+//import About from './components/sections/About';
 //import Work from './components/sections/Work';
-import Footer from './components/sections/Footer';
+//import Footer from './components/sections/Footer';
+const About = lazy(() => import('./components/sections/About'));
+const Work = lazy(() => import('./components/sections/Work'));
+const Footer = lazy(() => import('./components/sections/Footer'));
 
 function App() {
   const worklist = [
@@ -121,11 +123,11 @@ function App() {
       <div className='container'>
         <Navbar />
         <Home />
-        <About skillset={skillset} certifications={certifications} />
         <Suspense fallback={<div>Loading...</div>}>
+          <About skillset={skillset} certifications={certifications} />
           <Work work={work} worklist={worklist} setWork={setWork} />
+          <Footer />
         </Suspense>
-        <Footer />
       </div>
     </div>
   );
