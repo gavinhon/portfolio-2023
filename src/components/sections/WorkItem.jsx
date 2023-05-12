@@ -1,6 +1,6 @@
 import React from 'react';
 
-function WorkItem({ work }) {
+function WorkItem({ work, skillset }) {
   return work ? (
     <div className='work-item'>
       <p className='work-position'>
@@ -22,6 +22,20 @@ function WorkItem({ work }) {
           </li>
         ))}
       </ul>
+      <div className='work-content-skills'>
+        {skillset.map((skill) => {
+          if (skill.company.includes(work.companyCode)) {
+            return (
+              <span
+                key={skill.skill}
+                className={`${skill.type} skill-icon hide-for-show`}
+              >
+                {skill.skill}
+              </span>
+            );
+          }
+        })}
+      </div>
     </div>
   ) : (
     <></>

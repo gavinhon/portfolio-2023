@@ -2,9 +2,6 @@ import { lazy, Suspense, useEffect, useState } from 'react';
 import './App.css';
 import Navbar from './components/sections/Navbar';
 import Home from './components/sections/Home';
-//import About from './components/sections/About';
-//import Work from './components/sections/Work';
-//import Footer from './components/sections/Footer';
 const About = lazy(() => import('./components/sections/About'));
 const Work = lazy(() => import('./components/sections/Work'));
 const Footer = lazy(() => import('./components/sections/Footer'));
@@ -14,6 +11,7 @@ function App() {
     {
       id: 1,
       company: 'Hexagon',
+      companyCode: 'hxgn',
       position: 'Presales Engineer',
       tenure: 'November 2022 - Present',
       website: 'https://hexagon.com/',
@@ -28,6 +26,7 @@ function App() {
       id: 2,
       company: 'Singapore Land Authority',
       position: 'Principal Geospatial Specialist',
+      companyCode: 'sla',
       tenure: 'November 2019 - November 2022',
       website: 'https://www.sla.gov.sg/',
       description: [
@@ -45,6 +44,7 @@ function App() {
     {
       id: 3,
       company: 'Micron Technology',
+      companyCode: 'mi',
       position: 'IT Engineer',
       tenure: 'September 2017 - October 2019',
       website: 'https://www.micron.com/',
@@ -58,6 +58,7 @@ function App() {
     {
       id: 4,
       company: 'ST Engineering',
+      companyCode: 'ste',
       position: 'Project Assistant',
       tenure: 'April 2011 - August 2011, May 2015 - July 2015',
       website: 'https://www.stengg.com/',
@@ -70,26 +71,38 @@ function App() {
     },
   ];
   const skillset = [
-    { id: 0, type: 'gis', skill: 'Geospatial' },
-    { id: 1, type: 'gis', skill: 'OGC Standards' },
-    { id: 2, type: 'gis', skill: 'CesiumJS' },
-    { id: 3, type: 'gis', skill: 'Leaflet' },
-    { id: 4, type: 'gis', skill: 'Luciad' },
-    { id: 5, type: 'dev', skill: 'Javascript' },
-    { id: 6, type: 'dev', skill: 'ReactJS' },
-    { id: 7, type: 'dev', skill: 'NodeJS' },
-    { id: 8, type: 'dev', skill: 'ExpressJS' },
-    { id: 9, type: 'dev', skill: 'CSS' },
-    { id: 10, type: 'dev', skill: 'HTML' },
-    { id: 11, type: 'dev', skill: 'Linux' },
-    { id: 12, type: 'dev', skill: 'Windows Server' },
-    { id: 13, type: 'dev', skill: 'PostgreSQL' },
-    { id: 14, type: 'dev', skill: 'Java' },
-    { id: 15, type: 'dev', skill: 'Vite' },
-    { id: 16, type: 'presales', skill: 'Presales' },
-    { id: 17, type: 'presales', skill: 'Product Demo' },
-    { id: 18, type: 'presales', skill: 'Customer Training' },
-    { id: 19, type: 'presales', skill: 'Government' },
+    { id: 0, type: 'gis', company: ['sla', 'hxgn'], skill: 'Geospatial' },
+    { id: 1, type: 'gis', company: ['sla', 'hxgn'], skill: 'OGC Standards' },
+    { id: 2, type: 'gis', company: ['sla'], skill: 'CesiumJS' },
+    { id: 3, type: 'gis', company: ['sla'], skill: 'Leaflet' },
+    { id: 4, type: 'gis', company: ['hxgn'], skill: 'Luciad' },
+    { id: 5, type: 'dev', company: ['sla', 'hxgn'], skill: 'Javascript' },
+    { id: 6, type: 'dev', company: ['hxgn'], skill: 'ReactJS' },
+    { id: 7, type: 'dev', company: ['sla', 'hxgn'], skill: 'NodeJS' },
+    { id: 8, type: 'dev', company: ['sla', 'hxgn'], skill: 'ExpressJS' },
+    { id: 9, type: 'dev', company: ['sla', 'hxgn'], skill: 'CSS' },
+    { id: 10, type: 'dev', company: ['sla', 'hxgn'], skill: 'HTML' },
+    { id: 11, type: 'dev', company: ['hxgn'], skill: 'Linux' },
+    { id: 12, type: 'dev', company: ['hxgn'], skill: 'Windows Server' },
+    { id: 13, type: 'dev', company: ['sla', 'hxgn'], skill: 'PostgreSQL' },
+    { id: 14, type: 'dev', company: ['hxgn'], skill: 'Java' },
+    { id: 15, type: 'dev', company: ['hxgn'], skill: 'Vite' },
+    { id: 16, type: 'presales', company: ['hxgn'], skill: 'Presales' },
+    {
+      id: 17,
+      type: 'presales',
+      company: ['sla', 'hxgn'],
+      skill: 'Product Demo',
+    },
+    { id: 18, type: 'presales', company: ['hxgn'], skill: 'Customer Training' },
+    { id: 19, type: 'presales', company: ['sla'], skill: 'Government' },
+    { id: 20, type: 'dev', company: ['mi'], skill: 'Perl' },
+    { id: 21, type: 'dev', company: ['mi', 'ste'], skill: 'C#' },
+    { id: 22, type: 'dev', company: ['mi'], skill: 'DevOps' },
+    { id: 23, type: 'dev', company: ['mi'], skill: 'AGILE' },
+    { id: 24, type: 'dev', company: ['mi'], skill: 'L2 Support' },
+    { id: 25, type: 'dev', company: ['mi'], skill: 'Automation' },
+    { id: 26, type: 'dev', company: ['ste'], skill: 'Intern' },
   ];
   const certifications = [
     {
@@ -125,7 +138,12 @@ function App() {
         <Home />
         <Suspense fallback={<div>Loading...</div>}>
           <About skillset={skillset} certifications={certifications} />
-          <Work work={work} worklist={worklist} setWork={setWork} />
+          <Work
+            work={work}
+            worklist={worklist}
+            setWork={setWork}
+            skillset={skillset}
+          />
           <Footer />
         </Suspense>
       </div>

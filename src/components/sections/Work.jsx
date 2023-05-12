@@ -4,7 +4,7 @@ import { useState } from 'react';
 import './Work.css';
 import WorkItem from './WorkItem';
 
-function Work({ work, worklist, setWork }) {
+function Work({ work, worklist, setWork, skillset }) {
   useEffect(() => {
     setWork(worklist[0]);
   }, []);
@@ -23,7 +23,7 @@ function Work({ work, worklist, setWork }) {
       },
       { threshold: 0.0 }
     );
-    const sectionElements = document.querySelectorAll('.work-li');
+    const sectionElements = document.querySelectorAll('.work-li, .skill-icon');
     sectionElements.forEach((el) => observer.observe(el));
   }, [work]);
 
@@ -46,7 +46,7 @@ function Work({ work, worklist, setWork }) {
               </span>
             ))}
           </nav>
-          <WorkItem work={work} />
+          <WorkItem work={work} skillset={skillset} />
         </div>
       </section>
     </div>

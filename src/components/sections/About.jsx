@@ -35,13 +35,18 @@ function About({ skillset, certifications }) {
             <div className='tint'></div>
           </div>
           <div className='about-content-skills'>
-            <p className='about-content-title'>Experienced in:&nbsp;</p>
+            <p className='about-content-title'>Active skills:&nbsp;</p>
             {skillset.map((skill) => {
-              return (
-                <span key={skill.skill} className={`${skill.type} skill-icon`}>
-                  {skill.skill}
-                </span>
-              );
+              if (skill.company.includes('hxgn')) {
+                return (
+                  <span
+                    key={skill.skill}
+                    className={`${skill.type} skill-icon`}
+                  >
+                    {skill.skill}
+                  </span>
+                );
+              }
             })}
           </div>
           <div className='about-content-cert'>
