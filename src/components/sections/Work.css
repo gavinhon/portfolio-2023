@@ -94,17 +94,12 @@ p.work-position span {
   color: var(--main-purple);
 }
 
-p.work-position {
-  transition-delay: 600ms;
-}
-
 /* fly-in effect using observer in work component*/
 @media (prefers-reduced-motion) {
   .hide-for-show {
     transition: none;
   }
 }
-
 .work-li.show {
   opacity: 1;
   filter: blur(0);

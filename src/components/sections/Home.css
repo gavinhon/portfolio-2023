@@ -52,6 +52,7 @@
   transform: translateX(50%);
   transition-delay: 200ms;
 }
+
 @media (min-width: 1400px) {
   #bg.show {
     transform: translateX(33%);

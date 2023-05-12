@@ -113,10 +113,10 @@ section {
 }
 #bg {
   position: relative;
-  /*left: 50%;*/
   transition: left 1s ease;
 }
 
+/* Hide Show effect */
 .hide-for-show {
   opacity: 0;
   filter: blur(5px);
@@ -129,6 +129,7 @@ section {
   transform: translateX(0);
 }
 
+/* Skill Icons that display under About Me */
 .skill-icon,
 .cert-icon {
   font-size: var(--font-sm);
@@ -136,7 +137,7 @@ section {
   width: min-content;
   height: min-content;
   border-radius: 3px;
-  padding: 0 0.5rem;
+  padding: 0 var(--padding-sm);
   margin: 0.1rem;
   color: var(--main-offwhite);
   white-space: nowrap;
@@ -171,11 +172,3 @@ section {
     grid-template-rows: auto 1fr 1fr 1fr auto; /* Adjust the number of rows as needed */
   }
 }
-/*
-@media (min-width: 1400px) {
-  #bg {
-    left: 33%;
-    transition: left 1s ease;
-  }
-}
-*/

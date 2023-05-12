@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
 import './App.css';
 import Navbar from './components/sections/Navbar';
 import Home from './components/sections/Home';
 import About from './components/sections/About';
-import Work from './components/sections/Work';
+const Work = lazy(() => import('./components/sections/Work'));
+//import Work from './components/sections/Work';
 import Footer from './components/sections/Footer';
 
 function App() {
@@ -60,14 +61,14 @@ function App() {
       website: 'https://www.stengg.com/',
       description: [
         '2015 - Under the department of Radar Systems Integrations (RSI)',
-        'Develop C# application to integrate CCTV camera',
+        'Develop C# application to integrate CCTV camera and assist with project testing of Radars.',
         '2011 - Under the department of Sensor Business Group (SBG) working on AgilFence (PIDS)',
-        'Conduct site survey and product testing.',
+        'Conduct site survey, product testing and tasked with learning the manufacturing procedure and guiding technicians.',
       ],
     },
   ];
   const skillset = [
-    { id: 0, type: 'gis', skill: 'GIS' },
+    { id: 0, type: 'gis', skill: 'Geospatial' },
     { id: 1, type: 'gis', skill: 'OGC Standards' },
     { id: 2, type: 'gis', skill: 'CesiumJS' },
     { id: 3, type: 'gis', skill: 'Leaflet' },
@@ -86,6 +87,7 @@ function App() {
     { id: 16, type: 'presales', skill: 'Presales' },
     { id: 17, type: 'presales', skill: 'Product Demo' },
     { id: 18, type: 'presales', skill: 'Customer Training' },
+    { id: 19, type: 'presales', skill: 'Government' },
   ];
   const certifications = [
     {
@@ -120,7 +122,9 @@ function App() {
         <Navbar />
         <Home />
         <About skillset={skillset} certifications={certifications} />
-        <Work work={work} worklist={worklist} setWork={setWork} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Work work={work} worklist={worklist} setWork={setWork} />
+        </Suspense>
         <Footer />
       </div>
     </div>
