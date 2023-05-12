@@ -99,7 +99,7 @@ function App() {
     { id: 20, type: 'dev', company: ['mi'], skill: 'Perl' },
     { id: 21, type: 'dev', company: ['mi', 'ste'], skill: 'C#' },
     { id: 22, type: 'dev', company: ['mi'], skill: 'DevOps' },
-    { id: 23, type: 'dev', company: ['mi'], skill: 'AGILE' },
+    { id: 23, type: 'dev', company: ['mi'], skill: 'Agile' },
     { id: 24, type: 'dev', company: ['mi'], skill: 'L2 Support' },
     { id: 25, type: 'dev', company: ['mi'], skill: 'Automation' },
     { id: 26, type: 'dev', company: ['ste'], skill: 'Intern' },
@@ -136,7 +136,7 @@ function App() {
       <div className='container'>
         <Navbar />
         <Home />
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<></>}>
           <About skillset={skillset} certifications={certifications} />
           <Work
             work={work}
