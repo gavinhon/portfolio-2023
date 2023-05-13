@@ -1,10 +1,12 @@
 import React from 'react';
+import { useContext } from 'react';
 import { useEffect } from 'react';
-import { useState } from 'react';
+import DataContext from '../../context/DataContext';
 import './Work.css';
 import WorkItem from './WorkItem';
 
-function Work({ work, worklist, setWork, skillset }) {
+function Work() {
+  const { work, worklist, setWork, skillset } = useContext(DataContext);
   useEffect(() => {
     setWork(worklist[0]);
   }, []);

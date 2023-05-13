@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import DataContext from '../../context/DataContext';
 import './About.css';
 
-function About({ skillset, certifications }) {
+function About() {
+  const { certifications, skillset } = useContext(DataContext);
   return (
     <div id='about-section' className='section about-section hide-for-show'>
       <section>
